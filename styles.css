@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  color: #333;
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  background: white;
+  border-radius: 16px;
+  padding: 32px 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 28px;
+  color: #444;
+  font-size: 2.1rem;
+}
+
+.input-group {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+#nueva-tarea {
+  flex: 1;
+  padding: 14px 18px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  font-size: 1.05rem;
+  transition: border-color 0.2s;
+}
+
+#nueva-tarea:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+#agregar-tarea {
+  padding: 0 24px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#agregar-tarea:hover {
+  background: #5a67d8;
+}
+
+#lista-tareas {
+  list-style: none;
+}
+
+.tarea-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: #f8f9fa;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  transition: all 0.2s;
+}
+
+.tarea-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.tarea-texto {
+  flex: 1;
+  margin-right: 16px;
+  font-size: 1.1rem;
+}
+
+.tarea-texto.completada {
+  text-decoration: line-through;
+  color: #888;
+  opacity: 0.8;
+}
+
+.btn-editar, .btn-eliminar, .btn-toggle {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.15s;
+}
+
+.btn-toggle { background: #9ae6b4; color: #2f855a; }
+.btn-editar  { background: #fbd38d; color: #c05621; }
+.btn-eliminar { background: #feb2b2; color: #9b2c2c; }
+
+.btn-toggle:hover { background: #68d391; }
+.btn-editar:hover  { background: #f6ad55; }
+.btn-eliminar:hover { background: #fc8181; }
+
+/* Responsivo */
+@media (max-width: 480px) {
+  .input-group { flex-direction: column; }
+  #agregar-tarea { padding: 14px; }
+}
